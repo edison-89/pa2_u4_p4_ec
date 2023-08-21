@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h6>Hola Mundo</h6>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Cedula</th>
+			</tr>
+		</thead>
+		<hbody>
+			<tr th:each="propietario:${propietarios}">
+				<td th:text="${propietario.id}"></td>
+				<td th:text="${propietario.nombre}"></td>
+				<td th:text="${propietario.apellido}"></td>
+				<td th:text="${propietario.cedula}"></td>
+			</tr>
+		</hbody>
+	</table>
+</body>
+
+</html>
